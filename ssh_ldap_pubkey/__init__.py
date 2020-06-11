@@ -434,9 +434,9 @@ class LdapSSH(object):
                 filtered.append(key)
             elif validity == 'valid' and (expiration is not None and day <= expiration):
                 filtered.append(key)
-            elif validity == 'expire' and (expiration is not None
-                                           and expiration >= today and
-                                           day > expiration):
+            elif validity == 'expire' and (
+                expiration is not None and expiration >= today and day > expiration
+            ):
                 filtered.append(key)
 
         return filtered
